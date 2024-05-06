@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+//maybe can get rid of this file bc already in main.jsx
 const Navigation = () => {
     return (
         <nav>
