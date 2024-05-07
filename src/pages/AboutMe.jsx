@@ -1,9 +1,11 @@
 //export should be default
 export default function AboutMe() {
     return(
+       
         <div className="about-me-container">
             <br></br>
             <h2>About Me</h2>
+            <div className="container">
             <div className='about-me-content'>
                 <div className='avatar'>
                     <img src="../images/giphy.gif" alt="Maya's Placeholder Gif"></img>
@@ -18,6 +20,10 @@ export default function AboutMe() {
                 </p>
                 </div>
             </div>
+            </div>
+            
         </div>
+      
+        
     );
 }
