@@ -10,6 +10,8 @@ const ContactPage = () => {
                             <input type="text" name="name" required></input>
                             <label for="email">Enter email:</label>
                             <input type="email" name="email" required></input>
+                            <label for="emailsubject">Enter email subject:</label>
+                            <input type="emailsubject" name="emailsubject" required></input>
                             <label for="message">Enter message:</label>
                             <textarea name="message" required></textarea>
                             <div className="container">

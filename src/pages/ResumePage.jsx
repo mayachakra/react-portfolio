@@ -1,79 +1,113 @@
 import React, {useEffect} from 'react';
 const ResumePage = () => {
     useEffect(() => {
+        const toggleCard = (element) => {
+            element.classList.toggle('is-flipped');
+        };
+        const cards = document.querySelectorAll('.content');
+        cards.forEach((card) => {
+            card.addEventListener('click', () => toggleCard(card)); //click event listener for each card
+        });
+        return () => {
+            cards.forEach((card) => {
+                card.removeEventListener('click', () => toggleCard(card));
+            });
+        };
         //add event info here
         //resume was previously experience, check the css
+        //add this with the resume.png
+        //<img src="resume.png" style=" width:100px; height:100px; opacity: 90%;">
     }, []);
     return(
         <div id="resume"> 
-        <section class="hidden">
-                 <h1 class="subtitle">Resume</h1>
-                 <h2>
-                    click on each tab to see skills, work, and project experience. 
-                </h2>
-                <div class="professional" id="work/internships">
-                    <ul>
-                        <li><a href=" https://www.melaninis.co/" target="_blank"><strong>Melanin Is…</strong></a>
-                        <br></br>
-                        <small>Website Designer and Optimization | Remote Internship | May 2023-July 2023</small> 
-                        <br></br>	
-                            Utilized shopify to create, improve, and renovate the Melanin is… website to align with the company's image
-                            while increasing user functionality and accessibility.
-                            Check on SEO (Search Engine Optimization) by conducting website audits to identify areas for improvement, such as page speed and mobile responsiveness
-                        </li>
-                        <br></br>
-                        <li><a><strong>Code Ninjas</strong></a>
-                        <br></br><small>Tutor/Office Manager | Astoria, NY | June 2021-April 2022 </small> 
-                        <br></br>	
-                        Educated children (ages 5-14) on computer science fundamentals using Scratch and taught classes for game development with Javascript
-                        Utilized Microsoft Office for scheduling student pick-ups, contacting clients, and maintaining accurate center status
-                        </li>
-                    </ul>
-                </div>
+        <a href="../images/Maya Chakravarty Resume.pdf" target="_blank" download="Maya Chakravarty Resume.pdf"> 
+        <h1 class="subtitle">Resume</h1>
+        </a>
+         <p>You can dowload my resume by clicking the title above!</p>
+        <h3>Click each card to reveal their respective information.</h3>
+                    <div class="cardcontainer">
+                        <div class="content" onclick="toggleCard(this)">
+                            <div class="innercard">
+                                <div class="frontcard">
+                                    <h3>Front-End Technologies</h3>
+                                </div>    
+                                <div class="backcard">
+                                    <ul>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JavaScript</li>
+                                        <li>TypeScript</li>
+                                        <li>PHP</li>
+                                        <li>jQuery</li>
+                                        <li>Responsive Design</li>
+                                        <li>React</li>
+                                        <li>Bootstrap</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="academic" id="academic">
-                    <ul>
-                        <li><a href="https://github.com/agonis21/cpoolfinal" target="_blank"><strong>Carpool GUI Project</strong></a>
-                            <br></br>
-                            Created a program to rent out a vehicles computational power allowing users to sign up and either rent the power
-                            or provide the vehicle power for rental through an interactive GUI using Java Swing and MySQL for a functional database to
-                            store, save, and input information
-                           
-                            This link, <a href="https://github.com/steven-h-rogers/CarpoolUnified" target="_blank"></a><strong>here</strong>, had to be relocated to the above link due to merge issues 
-                            and is included to provide accurate representation of member contributions
-                        </li>
-                        
-                        <li><a href="https://lovertab.github.io/timesavor/" target="_blank"><strong>Time-Savor</strong></a>
-                        <br></br>
-                            Created a website with a group to allow users to request a certain meal with specifications such as food exclusions and
-                            a time frame and are met with recipes related to that search according to their specifications. Utilized two API's, one 
-                            for recipes and one for YouTube tutorials, concepts such as MVC and libraries such as jQuery and Bootstrap for styling
-                        </li>
-                    </ul>
-                </div>
+                        <div class="content" onclick="toggleCard(this)">
+                            <div class="innercard">
+                                <div class="frontcard">
+                                    <h3>Backend-End Technologies</h3>
+                                </div>    
+                                <div class="backcard">
+                                    <ul>
+                                        <li>APIs</li>
+                                        <li>Node</li>
+                                        <li>Express</li>
+                                        <li>MySQL, Sequelize</li>
+                                        <li>MongoDB, Mongoose</li>
+                                        <li>REST, RESTFul APIs</li>
+                                        <li>GraphQL</li>
+                                        <li>NoSQL</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="personal" id="personal">
-                    <ul>
-                        <li><a href="https://mayachakravarty.com/" target="_blank"><strong>Portfolio Site</strong></a>
-                        <br></br>
-                            Created a website using HTML, Javascript, CSS, and Bootstrap intended to act as a virtual and interactive resume with a 
-                            functioning navigation bar to different areas of the page and functioning links. Utilized JQuery and APIs for transitions and
-                            form handling. Included exterior images and links and had the site live through GitHub
-                        </li>
-                    </ul>
-                </div>
-                <div class="skilla" id="skills">
-                    <ul>
-                        <h3>Skills</h3>
-                        <li>
-                        <br></br>
-                            here are all my skills:
-
-                        </li>
-                    </ul>
-                </div>
-         </section>
- </div>
+                        <div class="content" onclick="toggleCard(this)">
+                            <div class="innercard">
+                                <div class="frontcard">
+                                    <h3>Methodologies, Patterns, and Concepts</h3>
+                                </div>    
+                                <div class="backcard">
+                                    <ul>
+                                        <li>RESTful APIs</li>
+                                        <li>MVC(Model-View-Controller)</li>
+                                        <li>TDD(Test-Driven-Development)</li>
+                                        <li>JUnit</li>
+                                        <li>Agile</li>
+                                        <li>Scrum</li>
+                                        <li>Kanban</li>
+                                        <li>Waterfall</li>
+                                        <li>Singleton</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content" onclick="toggleCard(this)">
+                            <div class="innercard">
+                                <div class="frontcard">
+                                    <h3>Software Engineering Tools and Proficiencies</h3>
+                                </div>    
+                                <div class="backcard">
+                                    <ul>
+                                        <li>Java, Java Swing</li>
+                                        <li>Python</li>
+                                        <li>C++</li>
+                                        <li>Git</li>
+                                        <li>Github</li>
+                                        <li>Eclipse, Intellij</li>
+                                        <li>Visual Studio Code</li>
+                                        <li>Insomnia</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </div>
     );
 }
 

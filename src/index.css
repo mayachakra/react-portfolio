@@ -20,7 +20,7 @@ p{
 
 a {
   font-weight: 500;
-  color: #FBCBCB;
+  color: #b58383;
   text-decoration: inherit;
 }
 a:hover {
@@ -104,31 +104,32 @@ h1{
   opacity: 90%;
 }
 
-h2{
-  text-align: center;
-  font-family: "Philosopher", sans-serif;
-}
 
 .avatar{
   flex-basis:50%;
-  margin-top: 10%;
-  margin-bottom: 5%;
 }
 
+.avatar img{
+  width: 100%;
+}
+
+.text-content p{
+  font-size: larger;
+}
 .text-content{
   flex-basis: 50%;
-  margin-top: 10%;
+  margin-top: 2%;
   margin-bottom: 5%;
 }
 
 header, footer{
   text-align: center;
   padding: 1em;
-  background-color: #222222;
+  background-color: #dec8c8;
 
 }
 footer{
-  background-color: #222222;
+  background-color: black;
 }
 
 .header-container h2{
@@ -139,8 +140,13 @@ footer{
   border-radius: 10px;
   margin: 2rem auto;
   justify-content: space-between;
-  background-color: #222222;
+  /*background-color: #222222;*/
   max-width: 100%;
+}
+
+.about-me-container h2{
+  font-size: 250%;
+  justify-content: flex-start;
 }
 
 @media (min-width: 768px){
@@ -162,6 +168,80 @@ footer{
 }
 
 /* Resume */
+@media screen and (max-width: 768px){
+  .content{
+    width: calc(50% - 20px);
+  }
+}
+
+.content{
+  border: 1px solid #FBCBCB;
+  border-radius: 10px;
+  margin:10px;
+  height: 300px;
+  width: calc(25% - 20px);
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgb(199, 144, 168);
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+}
+
+#resume p{
+  font-size: 150%;
+}
+
+#resume h3{
+  text-align: center;
+  opacity: 85%;
+}
+
+.content h3{
+  text-align: center;
+}
+
+.cardcontainer{
+  display: flex;
+  justify-content: space-between;
+ /* gap: 100px; */
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/*cards*/
+.innercard{
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.is-flipped .innercard{
+  transform: rotateY(180deg);
+}
+
+.frontcard,
+.backcard{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.frontcard{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backcard{
+  transform: rotateY(180deg);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 ul{
   list-style: none;
 }
@@ -203,6 +283,12 @@ input,textarea{
   align-items: center;
 }
 
+.row{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 button{
   padding: 10px 20px;
   cursor: pointer;
@@ -213,4 +299,58 @@ button{
 
 button:hover{
   background-color: #FBCBCB;
+}
+
+
+/* Portfolio */
+
+.projects-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap:20px;
+  justify-content: center;
+}
+
+.project-card{
+ width: 100%;
+ margin:10px;
+ border: 2px solid #FBCBCB;
+ border-radius: 8px; 
+ overflow: hidden;
+}
+
+.project-image-container{
+  position: relative;
+}
+
+.project-image{
+  width:100%;
+  height:auto;
+  transition: filter 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image{
+  filter: brightness(1.2);
+  transform: translateY(-10px);
+}
+
+.project-card:hover{
+  transform: translateY(-10px);
+}
+
+.text-overlay{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-color: #b58383;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay{
+  font-size: 18px;
+  font-weight: bold;
+  color:white;
 }
