@@ -14,11 +14,11 @@ export default function AboutMe() {
                 <div className="text-content">
                 <h1>Hello, my name is Maya Chakravarty</h1>
                 <p>
-                I am a recent Graduate from St. John's University with a Bachelor of Applied Science - BASc in Computer Science.
-                I am pursuing a career in Full Stack Development and am currently enrolled in a coding bootcamp for Full Stack
-                working with essential languages, libraries and platforms for web development. 
-                My academic background has prepared me prioritizing a strong understanding of the fundamentals of programming,
-                data structures and algorithms, and software design methods.
+                I am a recent graduate from St. John's University with a Bachelor of Applied Science - BASc in Computer Science.
+                I am pursuing a career in Full Stack Development and have recently completed a certification course from Columbia Engineering
+                in Full Stack working with essential languages, libraries and platforms for web development. 
+                My academic background has prepared me prioritizing a strong understanding of data structures and algorithms, 
+                database management, application development, and software design methods.
                 </p>
                 </div>
                 </div>
