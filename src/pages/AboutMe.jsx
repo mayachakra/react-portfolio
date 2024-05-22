@@ -9,7 +9,7 @@ export default function AboutMe() {
             <div className='about-me-content'>
                 <div className="row">
                 <div className='avatar'>
-                    <img src="../images/giphy.gif" alt="Maya's Placeholder Gif"></img>
+                    <iframe src="https://giphy.com/embed/M9lTiHnUMCmlllu3oQ" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/motiondesign-365gifs-motionlovers-M9lTiHnUMCmlllu3oQ">via GIPHY</a></p>
                 </div>
                 <div className="text-content">
                 <h1>Hello, my name is Maya Chakravarty</h1>
